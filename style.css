@@ -1,0 +1,72 @@
+/*Style Colours*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #000043;
+    --light: #ffffff;
+    --dark: #000000;
+    --muted: #c3c3d3;
+    
+    --font-normal: Roboto, Arial, sans-serif;
+    --font-heading: 'Roboto Slab', sans-serif;
+    
+    --space-0: 0;  /* 0px*/
+    --space-1: 0.5rem; /*8px*/
+    --space-2: 1rem; /* 16px */
+    --space-3: 2rem; /* 32px */
+    --space-4: 4rem; /* 64 */
+    --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgb(54, 48, 41, 0.2);
+    --shaow-light: 0 0.1rem 0.2rem 0.1rem rgb(255, 225, 255, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    /* will force elements to scale from the border instead*/
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: var(--font-normal);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+/******************************** COLORS **********************************/
+.bg-primary {    background-color: var(--primary);}
+.bg-light {background-color: var(--light);}
+.bg-dark {background-color: var(--dark);}
+.bg-muted {background-color: var(--muted);}
+
+.text-primary {    color: var(--primary);}
+.text-light {color: var(--light);}
+.text-dark {color: var(--dark);}
+.text-muted {color: var(--muted);}
+
+/******************************** TEXT **********************************/
+.text-center{
+    text-align: center;
+}
+
+/******************************** SPACING **********************************/
+
+.m-0 {margin: var(--space-0);}
+.m-1 {margin: var(--space-1);}
+.m-2 {margin: var(--space-2);}
+.m-3 {margin: var(--space-3);}
+
+.p-0 {padding: var(--space-0);}
+.p-1 {padding: var(--space-1);}
+.p-2 {padding: var(--space-2);}
+.p-3 {padding: var(--space-3);}
+.p-4 {padding: var(--space-4);}
+
+.gap-0 {gap: var(--space-0);}
+.gap-1 {gap: var(--space-1);}
+.gap-2 {gap: var(--space-2);}
+.gap-3 {gap: var(--space-3);}
