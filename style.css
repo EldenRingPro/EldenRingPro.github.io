@@ -15,6 +15,7 @@
     --space-2: 1rem; /* 16px */
     --space-3: 2rem; /* 32px */
     --space-4: 4rem; /* 64 */
+    --space-5: 5rem;
     --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgb(54, 48, 41, 0.2);
     --shaow-light: 0 0.1rem 0.2rem 0.1rem rgb(255, 225, 255, 0.5);
 }
@@ -65,8 +66,32 @@ h1, h2, h3, h4, h5, h6 {
 .p-2 {padding: var(--space-2);}
 .p-3 {padding: var(--space-3);}
 .p-4 {padding: var(--space-4);}
+.p-5 {padding: var(--space-5);}
 
 .gap-0 {gap: var(--space-0);}
 .gap-1 {gap: var(--space-1);}
 .gap-2 {gap: var(--space-2);}
 .gap-3 {gap: var(--space-3);}
+
+/******************************** LAYOUT **********************************/
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* repeat 1fr twice */
+}
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* repeat 1fr twice */
+}
+
+/******************************** COMPOMENTS **********************************/
+
+
+
+
+.product-image img {
+    aspect-ratio: 16/12;
+    width: 100%;
+    object-fit: cover;
+}
