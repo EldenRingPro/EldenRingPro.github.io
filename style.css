@@ -95,3 +95,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     object-fit: cover;
 }
+
+/******************************** Vertical line **********************************/
+
+.vl {
+    border-left: 5rem #000043;;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
