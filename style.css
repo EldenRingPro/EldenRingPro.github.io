@@ -6,6 +6,9 @@
     --light: #ffffff;
     --dark: #000000;
     --muted: #c3c3d3;
+    --primary-tint: #2d3bff;
+    --primary-shade: #00002a;
+    --muted-tint: #e9e9ef;
     
     --font-normal: Roboto, Arial, sans-serif;
     --font-heading: 'Roboto Slab', sans-serif;
@@ -54,6 +57,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.text-right{
+    text-align: right;
+}
+
 /******************************** SPACING **********************************/
 
 .m-0 {margin: var(--space-0);}
@@ -96,13 +103,103 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
 }
 
-/******************************** Vertical line **********************************/
+/******************************** Buttons **********************************/
 
-.vl {
-    border-left: 5rem #000043;;
-    height: 500px;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 0;
+.btn{
+    border: none;
+    border-radius: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;    
 }
+
+.btn-primary{
+    background-color: var(--primary);
+    color: var(--light);
+}
+.btn-primary:hover{
+    background-color: var(--primary-tint);
+}
+.btn-primary:active {
+    background-color: var(--primary-shade);
+}
+.btn-secondary{
+    background-color: var(--muted);
+    color: var(--dark);
+}
+.btn-secondary:hover {
+    background-color: var(--muted-tint);
+}
+.tn-secondary:acbtive {
+    background-color: var(--muted-shade);
+}
+
+.link{
+    color: var(--primary);
+    text-decoration: underline;
+}
+.link:hover{
+    color: var(--primary-tint);
+}
+.link:active{
+    color: var(--primary-shade);
+}
+
+/* Navigation styles */
+.nav-wrapper{
+    display: block;
+}
+nav{
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Default link appearance inside any nav */
+.nav-wrapper nav a{
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.5rem;
+    transition: background-color 180ms ease, color 180ms ease, transform 140ms ease, box-shadow 180ms ease;
+    font-weight: 500;
+}
+
+/* If nav sits on a dark background (uses .btn-primary), make links light by default */
+.nav-wrapper.btn-primary nav a{
+    color: var(--light);
+}
+
+/* Hover / focus states */
+.nav-wrapper:not(.btn-primary) nav a:hover,
+.nav-wrapper:not(.btn-primary) nav a:focus{
+    background-color: var(--primary);
+    color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-dark);
+}
+
+.nav-wrapper.btn-primary nav a:hover,
+.nav-wrapper.btn-primary nav a:focus{
+    background-color: rgba(255,255,255,0.12);
+    color: var(--light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.nav-wrapper nav a:focus{ outline: 2px solid rgba(0,0,0,0); }
+
+/* Contact panel with left blue vertical line */
+.contact-panel{
+    border-left: 6px solid var(--primary-tint);
+    padding-left: var(--space-2);
+    max-width: 900px;
+    margin: var(--space-2) auto;
+}
+
+/* Slightly smaller line on narrow screens */
+@media (max-width: 480px){
+    .contact-panel{ border-left-width: 4px; padding-left: 0.75rem; }
+}
+
+
