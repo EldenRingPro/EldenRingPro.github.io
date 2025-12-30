@@ -19,6 +19,7 @@
     --space-3: 2rem; /* 32px */
     --space-4: 4rem; /* 64 */
     --space-5: 5rem;
+    --space-10: 10rem; /* 160px */
     --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgb(54, 48, 41, 0.2);
     --shaow-light: 0 0.1rem 0.2rem 0.1rem rgb(255, 225, 255, 0.5);
 }
@@ -74,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 .p-3 {padding: var(--space-3);}
 .p-4 {padding: var(--space-4);}
 .p-5 {padding: var(--space-5);}
+.p-10 {padding: var(--space-10);}
 
 .gap-0 {gap: var(--space-0);}
 .gap-1 {gap: var(--space-1);}
@@ -81,6 +83,11 @@ h1, h2, h3, h4, h5, h6 {
 .gap-3 {gap: var(--space-3);}
 
 /******************************** LAYOUT **********************************/
+
+.grid-1col {
+    display: grid;
+    grid-template-columns: 1fr; /* single column taking full width */
+}
 
 .grid-2col {
     display: grid;
@@ -94,7 +101,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /******************************** COMPOMENTS **********************************/
 
-
+.image-alignment {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
 
 
 .product-image img {
