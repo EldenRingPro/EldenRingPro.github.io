@@ -8,18 +8,17 @@
 <body>
     <h1 class="bg-primary text-light text-center p-4">
         CONTACTS
-        <nav class="nav-wrapper p-2 btn-primary text-light text-right">
-            <a href="index.html">Home</a>
-        </nav> 
+        
     </h1>
     
     
     
     <div class="nav-wrapper p-2 btn-primary text-center">
-        <nav>            
+        <nav> 
+            <a href="index.html">Home</a>           
             <a href="courses.html">Courses</a>
             <a href="news.html">News</a>
-            <a href="library.html">Library</a>
+            <a href="library.html">Library</a>            
         </nav>
     </div>
     
@@ -63,8 +62,64 @@
             <p>Hi my name is Karen and I am here to guide you and make you succeed in your studies.</p>
         </div>
     </div>
-
     
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Contact Form</title>
+    </head>
+    <body>
+        
+        <form action="mailto:info@coffee.com" method="post" enctype="text/plain" class="contact-form P-4 m-4 grid-1col gap-2">
+            
+            <div>
+                <label for="input-topic">Topic:</label>
+                <select name="topic" id="input-topic" required>
+                    <option value="" disabled selected>Choose a topic</option>
+                    <option value="Difficulties">Difficulties</option>
+                    <option value="Complaints">Complaints</option>
+                </select>
+            </div>
+            
+            <div>
+                <!-- Labels can be linked to inputs using ID -->
+                <label for="input-name">Name:</label>
+                <input type="text" name="name"
+                id="input-name"
+                placeholder="John Borg"
+                required
+                minlength="4">
+            </div>
+            
+            <div>
+                <label for="input-email">Email:</label>
+                <input type="email" name="email"
+                id="input-email"
+                placeholder="me@example.com"
+                required>
+            </div>
+            
+            <div>
+                <label for="input-message">Your Message:</label>
+                <textarea name="message" id="input-message"
+                placeholder="Your message here..."
+                cols="30"
+                rows="10"
+                required
+                minlength="20"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </form>
+        
+    </body>
+    </html>
     
     <div class="grid-3col bg-primary text-light text-center p-5">
         <div>
